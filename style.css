@@ -1,0 +1,22 @@
+canvas{
+	margin: 0px auto; 
+	display: block; 
+	border: 2px dashed black; 
+	background-color: #33CCFF;
+}
+
+div{
+	text-align: center;
+}
+
+input{
+	background: navy;
+	margin: 5px;
+	border: 1px solid black; 
+	color: white; 
+	padding: 10px 20px; 
+	font-size: 15px;
+}
+input:hover {
+	background: #3333FF;
+}
