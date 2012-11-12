@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
 	//define some globals
 	canvasWidth = 1000;
 	canvasHeight = 500;
@@ -52,16 +52,20 @@ function initialiseBubble(){
 	bubble.y = randomY();
 	bubble.radius = randomRadius();
 
+	//ensure that the bubble starts fully within the canvas on the X axis
 	if((bubble.x + bubble.radius) > canvas.width){
+		//if it doesn't ensure that it does
 		bubble.x -= bubble.radius;
 	}else if((bubble.x - bubble.radius) < 0){
 		bubble.x += bubble.radius;
 	}
 
+	//ensure that the bubble starts fully within the canvas on the Y axis
 	if((bubble.y + bubble.radius) > canvas.height){
-			bubble.y -= bubble.radius;
+		//if it doesn't ensure that it does
+		bubble.y -= bubble.radius;
 	}else if((bubble.y - bubble.radius) < 0){
-			bubble.y += bubble.radius;
+		bubble.y += bubble.radius;
 	}
 
 	//randomly decide whether to give bubble a positive or negative velocity on the X axis
@@ -119,7 +123,7 @@ function moveBubble(){
 
 		//check to ensure a bubble is not going off the canvas
 		for(var i = 0; i <= 30; i++){
-		
+
 			//if off to right
 			if((bubbles[i].x + bubbles[i].radius) > canvas.width){
 				//make xVel negative
